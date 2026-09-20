@@ -1,0 +1,53 @@
+@use "../abstracts/variables" as v;
+
+.contact-section {
+  padding-bottom: v.$space-xxl;
+}
+
+.contact-card {
+  background: v.$pink;
+  padding: 70px;
+  border-radius: 12px 100px 12px 100px;
+  display: grid;
+  grid-template-columns: 1fr .8fr;
+  gap: 70px;
+  box-shadow: v.$shadow-soft;
+
+  h2 {
+    margin-bottom: 25px;
+  }
+}
+
+.contact-intro {
+  max-width: 520px;
+  color: #76666d;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    text-decoration: none;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(81, 72, 77, .18);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    transition: padding .25s ease;
+
+    &:hover {
+      padding-left: 8px;
+    }
+  }
+
+  span {
+    font-family: v.$serif;
+    font-size: 1.25rem;
+  }
+
+  small {
+    color: #776a70;
+    align-self: center;
+  }
+}
