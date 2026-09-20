@@ -1,0 +1,31 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin section-width {
+  width: min(1160px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+@mixin hover-lift {
+  transition: transform .25s ease, box-shadow .25s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(81, 72, 77, .09);
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 850px) {
+    @content;
+  }
+}
