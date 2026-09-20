@@ -1,0 +1,28 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.site-footer {
+  @include m.section-width;
+  padding: 35px 0 45px;
+  border-top: 1px solid v.$line;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: v.$muted;
+  font-size: .75rem;
+
+  div {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  strong {
+    color: v.$ink;
+    letter-spacing: .1em;
+  }
+
+  p {
+    margin: 0;
+  }
+}
