@@ -1,0 +1,134 @@
+@use "../abstracts/variables" as v;
+
+.split-section,
+.skills-section,
+.journey-section {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 60px;
+  padding: v.$space-xxl 0;
+}
+
+.section-label {
+  padding-top: 8px;
+  display: flex;
+  gap: v.$space-sm;
+  align-items: flex-start;
+
+  span {
+    font-size: .7rem;
+    color: v.$pink-deep;
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  max-width: 900px;
+
+  p {
+    margin: 0;
+    color: v.$muted;
+  }
+}
+
+.education-section {
+  padding: 0 0 v.$space-xxl;
+}
+
+.hobby-section {
+  padding: 0 0 v.$space-xxl;
+}
+
+.journey-section {
+  padding-top: 0;
+}
+
+.journey-content {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 70px;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-left: 1px solid v.$line;
+
+  li {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 20px;
+    padding: 0 0 30px 25px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -5px;
+      top: 5px;
+      width: 9px;
+      height: 9px;
+      background: v.$pink-deep;
+      border-radius: 50%;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    span {
+      font-size: .68rem;
+      color: v.$pink-deep;
+      font-weight: 700;
+    }
+
+    strong {
+      font-family: v.$serif;
+      font-size: 1.35rem;
+    }
+
+    p {
+      margin: 4px 0 0;
+      color: v.$muted;
+      font-size: .82rem;
+    }
+  }
+}
+
+.interest-strip {
+  border-top: 1px solid v.$line;
+  border-bottom: 1px solid v.$line;
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: v.$space-xxl;
+
+  > span {
+    font-size: .68rem;
+    letter-spacing: .16em;
+    font-weight: 700;
+    color: v.$muted;
+  }
+
+  p {
+    margin: 0;
+    font-family: v.$serif;
+    font-size: 1.2rem;
+  }
+
+  i {
+    font-family: v.$sans;
+    font-style: normal;
+    color: v.$pink-deep;
+    margin: 0 8px;
+  }
+}

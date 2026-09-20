@@ -1,0 +1,48 @@
+@use "../abstracts/variables" as v;
+
+.eyebrow,
+.section-kicker,
+.section-label p {
+  font-size: .72rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: v.$muted;
+}
+
+.hero {
+  h1,
+  & + section h2,
+  h2,
+  ~ section h2 {
+    font-family: v.$serif;
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -.035em;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(3.8rem, 8vw, 7rem);
+  }
+
+  h1 em,
+  ~ section h2 em {
+    font-style: italic;
+    color: #9c7f8b;
+  }
+}
+
+.section-shell h2 {
+  font-family: v.$serif;
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -.035em;
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  margin: 8px 0 35px;
+
+  em {
+    font-style: italic;
+    color: #9c7f8b;
+  }
+}
