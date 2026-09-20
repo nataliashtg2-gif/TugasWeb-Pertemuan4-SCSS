@@ -1,0 +1,42 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.skills-section {
+  background: transparent;
+}
+
+.skills-content {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.skill-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: v.$space-sm;
+  max-width: 650px;
+}
+
+.skill-pill {
+  display: inline-flex;
+  padding: 14px 20px;
+  border-radius: 999px;
+  font-size: .78rem;
+  font-weight: 600;
+  @include m.hover-lift;
+}
+
+$skill-colors: (
+  pink: v.$pink,
+  sage: v.$sage,
+  lavender: v.$lavender,
+  cream: v.$cream-alt
+);
+
+@each $name, $color in $skill-colors {
+  .skill-pill.#{$name} {
+    background: $color;
+  }
+}
